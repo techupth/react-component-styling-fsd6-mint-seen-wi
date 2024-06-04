@@ -1,20 +1,33 @@
-// Start coding here
+/** @jsxImportSource @emotion/react */
+import { css } from '@emotion/react';
 
 function Buttons(props){
-    const priority = props.priority;
+
+  let buttonColor = undefined;
+  const priority = props.priority
+   
     if ( priority === "primary"){
-      return (
-        <button className="primary-button">
-          {props.message}
-        </button>
-      )
+      buttonColor = "#074EE8";
     } else if (priority === "secondary"){
-      return (
-        <button className="secondary-button">
-          {props.message}
-        </button>
-      )
+      buttonColor = "#07A4E8";
     }
-  }
+
+  return (
+      <button 
+      css={css`
+      background-color: ${buttonColor};
+      border-radius: 5%; 
+      margin: 1% 0 1% 0;
+      width: 150px;
+      height: 50px;
+      `}>
+        {props.message}
+      </button> 
+  );
+
+}
+
 
 export default Buttons;
+
+      
