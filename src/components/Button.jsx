@@ -5,13 +5,13 @@ function Buttons(props){
     if ( priority === "primary"){
       return (
         <button className="primary-button">
-          Buttons
+          {props.message}
         </button>
       )
     } else if (priority === "secondary"){
       return (
         <button className="secondary-button">
-          Buttons
+          {props.message}
         </button>
       )
     }
